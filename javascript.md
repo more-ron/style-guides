@@ -241,7 +241,7 @@ Use one `var` declaration for multiple variables and declare each variable on a 
 ```javascript
 // Bad
 var items = getItems();
-var goSportsteam = true;
+var goSportsTeam = true;
 var drangonball = 'z';
 
 // Good
@@ -300,34 +300,28 @@ Conditional expressions are evaluated using coercion with the `ToBoolean` method
 + **Numbers** evalute to **false** if **+0, -0, or NaN**, otherwise **true**
 + **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
 
+Use shortcuts
+
 ```javascript
-// When evaluating that an array has length
 // Bad
-if (array.length > 0) ...
+if (name !== '') {
+  // ...stuff...
+}
 
 // Good
-if (array.length) ...
+if (name) {
+  // ...stuff...
+}
 
-// When evaluating that an array is empty
 // Bad
-if (array.length === 0) ...
+if (collection.length > 0) {
+  // ...stuff...
+}
 
 // Good
-if (!array.length) ...
-
-// When evaluating that a string is not empty
-// Bad
-if (string !== '') ...
-
-// Good
-if (string) ...
-
-// When evaluating that a string is empty
-// Bad
-if (string === '') ...
-
-// Good
-if (!string) ...
+if (collection.length) {
+  // ...stuff...
+}
 ```
 
 **[[⬆]](#TOC)**
