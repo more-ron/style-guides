@@ -25,7 +25,7 @@ Use soft tabs set to 2 spaces.
 </ul>
 
 <!-- Good -->
-<ul> {
+<ul>
 ..<li>Apples</li>
 </ul>
 ```
