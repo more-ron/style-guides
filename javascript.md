@@ -41,16 +41,16 @@ Don't use [reserved words](https://developer.mozilla.org/en-US/docs/JavaScript/R
 ```javascript
 // Bad
 var superman = {
-  class: 'superhero',
-  default: { clark: 'kent' },
-  private: true
+    class: 'superhero',
+    default: { clark: 'kent' },
+    private: true
 };
 
 // Good
 var superman = {
-  klass: 'superman',
-  defaults: { clark: 'kent' },
-  hidden: true
+    klass: 'superman',
+    defaults: { clark: 'kent' },
+    hidden: true
 };
 ```
 
@@ -89,7 +89,7 @@ var len = items.length,
 
 // Bad
 for (i = 0; i < len; i++) {
-  itemsCopy[i] = items[i];
+    itemsCopy[i] = items[i];
 }
 
 // Good
@@ -126,11 +126,11 @@ fast.';
 
 // Good
 var errorMessage = 'This is a super long error that ' +
-  'was thrown because of Batman.' +
-  'When you stop to think about ' +
-  'how Batman had anything to do ' +
-  'with this, you would get nowhere ' +
-  'fast.';
+    'was thrown because of Batman.' +
+    'When you stop to think about ' +
+    'how Batman had anything to do ' +
+    'with this, you would get nowhere ' +
+    'fast.';
 ```
 
 **[[⬆]](#TOC)**
@@ -142,17 +142,17 @@ Function expressions:
 ```javascript
 // Anonymous function expression
 var anonymous = function() {
-  return true;
+    return true;
 };
 
 // Named function expression
 var named = function named() {
-  return true;
+    return true;
 };
 
 // Immediately-invoked function expression (IIFE)
 (function() {
-  console.log('Welcome to the Internet. Please follow me.');
+    console.log('Welcome to the Internet. Please follow me.');
 })();
 ```
 
@@ -161,16 +161,16 @@ Never declare a function in a non-function block (if, while, etc). Assign the fu
 ```javascript
 // Bad
 if (currentUser) {
-  function test() {
-    console.log('Nope.');
-  }
+    function test() {
+        console.log('Nope.');
+    }
 }
 
 // Good
 if (currentUser) {
-  var test = function test() {
-    console.log('Yup.');
-  };
+    var test = function test() {
+        console.log('Yup.');
+    };
 }
 ```
 
@@ -179,12 +179,12 @@ Never name a parameter `arguments`, this will take precendence over the `argumen
 ```javascript
 // Bad
 function nope(name, options, arguments) {
-  // ...stuff...
+    // ...stuff...
 }
 
 // Good
 function yup(name, options, args) {
-  // ...stuff...
+    // ...stuff...
 }
 ```
 
@@ -196,8 +196,8 @@ Use dot notation when accessing properties.
 
 ```javascript
 var luke = {
-  jedi: true,
-  age: 28
+    jedi: true,
+    age: 28
 };
 
 // Bad
@@ -211,12 +211,12 @@ Use subscript notation `[]` when accessing properties with a variable.
 
 ```javascript
 var luke = {
-  jedi: true,
-  age: 28
+    jedi: true,
+    age: 28
 };
 
 function getProp(prop) {
-  return luke[prop];
+    return luke[prop];
 }
 
 var isJedi = getProp('jedi');
@@ -255,34 +255,34 @@ Assign variables at the top of their scope. This helps avoid issues with variabl
 ```javascript
 // Bad
 function() {
-  test();
-  console.log('doing stuff...');
+    test();
+    console.log('doing stuff...');
 
-  // ...other stuff...
+    // ...other stuff...
 
-  var name = getName();
+    var name = getName();
 
-  if (name === 'test') {
-    return false;
-  }
+    if (name === 'test') {
+        return false;
+    }
 
-  return name;
+    return name;
 }
 
 // Good
 function() {
-  var name = getName();
+    var name = getName();
 
-  test();
-  console.log('doing stuff...');
+    test();
+    console.log('doing stuff...');
 
-  // ...other stuff...
+    // ...other stuff...
 
-  if (name === 'test') {
-    return false;
-  }
+    if (name === 'test') {
+        return false;
+    }
 
-  return name;
+    return name;
 }
 ```
 
@@ -305,22 +305,22 @@ Use shortcuts
 ```javascript
 // Bad
 if (name !== '') {
-  // ...stuff...
+    // ...stuff...
 }
 
 // Good
 if (name) {
-  // ...stuff...
+    // ...stuff...
 }
 
 // Bad
 if (collection.length > 0) {
-  // ...stuff...
+    // ...stuff...
 }
 
 // Good
 if (collection.length) {
-  // ...stuff...
+    // ...stuff...
 }
 ```
 
@@ -333,11 +333,11 @@ Use braces with all multi-line blocks.
 ```javascript
 // Bad
 if (test)
-  return false;
+    return false;
 
 // Good
 if (test) {
-  return false;
+    return false;
 }
 
 // Bad
@@ -345,7 +345,7 @@ function() { return false; }
 
 // Good
 function() {
-  return false;
+    return false;
 }
 ```
 
@@ -353,17 +353,17 @@ function() {
 
 ## <a name='whitespace'>Whitespace</a>
 
-Use soft tabs set to 2 spaces.
+Use soft tabs set to 4 spaces.
 
 ```javascript
 // Bad
 function() {
-....var name;
+..var name;
 }
 
 // Good
 function() {
-..var name;
+....var name;
 }
 ```
 
@@ -372,12 +372,12 @@ Place 1 space before the leading brace.
 ```javascript
 // Bad
 function test(){
-  console.log('test');
+    console.log('test');
 }
 
 // Good
 function test() {
-  console.log('test');
+    console.log('test');
 }
 ```
 
@@ -386,14 +386,14 @@ Place an empty newline at the end of the file.
 ```javascript
 // Bad
 (function(global) {
-  // ...stuff...
+    // ...stuff...
 })(this);
 ```
 
 ```javascript
 // Good
 (function(global) {
-  // ...stuff...
+    // ...stuff...
 })(this);
 
 ```
@@ -425,10 +425,10 @@ var hero = {
 
 // Good
 var hero = {
-  firstName: 'Bob',
-  lastName: 'Parr',
-  heroName: 'Mr. Incredible',
-  superPower: 'strength'
+    firstName: 'Bob',
+    lastName: 'Parr',
+    heroName: 'Mr. Incredible',
+    superPower: 'strength'
 };
 ```
 
@@ -441,14 +441,14 @@ var hero = {
 ```javascript
 // Bad
 (function() {
-  var name = 'Skywalker'
-  return name
+    var name = 'Skywalker'
+    return name
 })()
 
 // Good
 (function() {
-  var name = 'Skywalker';
-  return name;
+    var name = 'Skywalker';
+    return name;
 })();
 ```
 
@@ -461,12 +461,12 @@ Avoid single letter names. Be descriptive with your naming.
 ```javascript
 // Bad
 function q() {
-  // ...stuff...
+    // ...stuff...
 }
 
 // Good
 function query() {
-  // ...stuff...
+    // ...stuff...
 }
 ```
 
@@ -479,14 +479,14 @@ var this_is_my_object = {};
 var this-is-my-object = {};
 function c() {};
 var u = new user({
-  name: 'Bob Parr'
+    name: 'Bob Parr'
 });
 
 // Good
 var thisIsMyObject = {};
 function thisIsMyFunction() {};
 var user = new User({
-  name: 'Bob Parr'
+    name: 'Bob Parr'
 });
 ```
 
@@ -495,20 +495,20 @@ Use PascalCase when naming constructors or classes.
 ```javascript
 // Bad
 function user(options) {
-  this.name = options.name;
+    this.name = options.name;
 }
 
 var bad = new user({
-  name: 'nope'
+    name: 'nope'
 });
 
 // Good
 function User(options) {
-  this.name = options.name;
+    this.name = options.name;
 }
 
 var good = new User({
-  name: 'yup'
+    name: 'yup'
 });
 ```
 
@@ -539,21 +539,21 @@ var active = true;
 
 // Bad
 function getType() {
-  console.log('fetching type...');
-  // Set the default type to 'no type'
-  var type = this._type || 'no type';
+    console.log('fetching type...');
+    // Set the default type to 'no type'
+    var type = this._type || 'no type';
 
-  return type;
+    return type;
 }
 
 // Good
 function getType() {
-  console.log('fetching type...');
+    console.log('fetching type...');
 
-  // Set the default type to 'no type'
-  var type = this._type || 'no type';
+    // Set the default type to 'no type'
+    var type = this._type || 'no type';
 
-  return type;
+    return type;
 }
 ```
 
@@ -565,9 +565,9 @@ Use `/** ... */` for multiline comments.
 // based on the passed in tag name
 function make(tag) {
 
-  // ...stuff...
+    // ...stuff...
 
-  return element;
+    return element;
 }
 
 // Good
@@ -577,9 +577,9 @@ function make(tag) {
  */
 function make(tag) {
 
-  // ...stuff...
+    // ...stuff...
 
-  return element;
+    return element;
 }
 ```
 
@@ -602,22 +602,22 @@ Cache jQuery lookups.
 ```javascript
 // Bad
 function setContainer() {
-  $('#container').hide();
+    $('#container').hide();
 
-  // ...stuff...
+    // ...stuff...
 
-  $('#container').show();
+    $('#container').show();
 }
 
 // Good
 function setContainer() {
-  var $container = $('#container');
+    var $container = $('#container');
 
-  $container.hide();
+    $container.hide();
 
-  // ...stuff...
+    // ...stuff...
 
-  $container.show();
+    $container.show();
 }
 ```
 
